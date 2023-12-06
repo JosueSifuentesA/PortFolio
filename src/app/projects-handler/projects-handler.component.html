@@ -1,0 +1,38 @@
+<section class="container">
+  <h3>MIS PROYECTOS</h3>
+  <section>
+    <div>
+      <h4>Filtrar proyectos</h4>
+      <div class="ProjectFilter_stacks">
+        <img id="NET" (click)="addToFilter($event)" src="assets/img/NetIcon.jpg" alt="A Icon of .NET Core"/>
+        <img id="CSharp" (click)="addToFilter($event)" src="assets/img/CSharpIcon.jpg" alt="A Icon of C#"/>
+        <img id="Jquery" (click)="addToFilter($event)" src="assets/img/JQueryIcon.png" alt="A Icon of JQuery"/>
+        <img id="PostgreSql" (click)="addToFilter($event)" src="assets/img/PostgreSQLIcon.png" alt="A Icon of PostgreSQL"/>
+        <img id="Html" (click)="addToFilter($event)" src="assets/img/HtmlIcon.png" alt="A Icon of HTML"/>
+        <img id="Css" (click)="addToFilter($event)" src="assets/img/CssIcon.webp" alt="A Icon of CSS"/>
+        <img id="Javascript" (click)="addToFilter($event)" src="assets/img/JavascriptIcon.jpg" alt="A Icon of Javascript"/>
+        <img id="React" (click)="addToFilter($event)" src="assets/img/ReactIcon.jpg" alt="A Icon of React"/>
+        <img id="Java" (click)="addToFilter($event)" src="assets/img/JavaIcon.jpg" alt="A Icon of Java"/>
+        <img id="MySql" (click)="addToFilter($event)" src="assets/img/MysqlIcon.png" alt="A Icon of Mysql"/>
+        <img id="Oracle" (click)="addToFilter($event)" src="assets/img/oracleIcon.webp" alt="A Icon of Oracle"/>
+        <img id="SpringBoot" (click)="addToFilter($event)" src="assets/img/SpringBootIcon.jpg" alt="A Icon of Springboot"/>
+      </div>
+    </div>
+    <div class="ProjectFilter_filters">
+      @if(this.stackList.length > 0){
+        <h4>Filtrado por</h4>
+        @for(stack of this.stackList; track $index){
+          <div class="filters_filter" (click)="deleteStack($event)">
+            <label>{{stack}}</label>
+            <img  src="assets/img/closeIcon.svg" alt="A Icon to delete the selection of the filter"/>
+          </div>
+        }
+      }
+    </div>
+  </section>
+  <section class="projectsHandler">
+    @for (card of this.projects; track $index) {
+      <app-project-card [cardInformation]="card"></app-project-card>
+    }
+  </section>
+</section>

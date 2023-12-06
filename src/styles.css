@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: 'MartianMono';
+  src: url('./assets/fonts/MartianMono-VariableFont_wdth,wght.ttf');
+}
+
+:root{
+  font-family: 'MartianMono',sans-serif;
+  --PrimaryColor: #FFDC61 ;
+  --lightGray: #C5C5C5 ;
+  --fontPrimaryColor: #B1B1B1;
+}
+body{
+  background-color: black;
+  color: white;
+}

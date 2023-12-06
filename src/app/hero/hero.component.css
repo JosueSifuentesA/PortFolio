@@ -1,0 +1,91 @@
+.heroSection_header{
+  margin: 20px 0px;
+}
+
+.personProfile_data{
+  display: flex;
+  align-items: center;
+}
+
+.personProfile_data h2{
+  font-size: clamp(2vw, 5.6vw, 40px);
+  color: var(--PrimaryColor);
+  margin:  0px 10px 0px 0px;
+}
+
+.header_personProfile h1{
+  font-size: clamp(1vw,3.6vw,20px);
+}
+
+.personProfile_data label{
+  font-size: 10px;
+  width: 35%;
+  color: var(--lightGray);
+}
+
+.header_personProfile button{
+  background-color: transparent;
+  color: inherit;
+  padding: 5px 10px;
+  border-radius: 15px;
+  border-style: none;
+  border-color: var(--PrimaryColor);
+  border:2px solid var(--PrimaryColor);
+}
+
+.descriptionList_jobStatus{
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  color: #70FF00;
+}
+
+.heroSection_header img{
+  height: 70%;
+  display: flex;
+  align-self: center;
+}
+
+li{
+  color: var(--fontPrimaryColor);
+  margin: 20px 0px;
+  font-size: clamp(1vw,4vw,14px);
+}
+
+strong{
+  color: white;
+}
+
+.heroSection_descriptionList_Desktop{
+  display: block;
+}
+
+.heroSection_descriptionList_Mobile{
+  display: none;
+}
+
+.heroSection{
+  display: flex;
+  flex-flow: row;
+  gap: 50px;
+}
+
+.heroSection img{
+  align-self: center;
+}
+
+@media(max-width:800px){
+  .heroSection_descriptionList_Mobile{
+    display: block;
+  }
+  .heroSection_descriptionList_Desktop{
+    display: none;
+  }
+
+  .heroSection{
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+  }
+
+}

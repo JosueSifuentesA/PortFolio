@@ -1,0 +1,18 @@
+<article class="projectCard">
+  <div class="projectCard_logoHandler">
+    <img class="projectCard_cardLogo" src="{{cardInformation.imgLandingPage}}" alt="Una foto de la pagina principal del proyecto {{cardInformation.cardName}}"/>
+  </div>
+  <div class="projectCard_stack">
+    @for(item of this.stackInput ; track $index){
+      <img src={{item.imageSrc}} alt="Un icono de {{item.technology}}"/>
+    }
+  </div>
+  <div class="projectCard_info">
+    <label class="projectCard_name">{{cardInformation.cardName}}</label>
+    <p class="projectCard_description">{{cardInformation.description}}</p>
+  </div>
+  <div class="projectCard_options">
+    <a class="options_github" href={{cardInformation.githubUrl}} target="_blank">Ver codigo <img alt="Un icono de Github" src="assets/img/GithubIcon.svg"/></a>
+    <a class="options_web"    href={{cardInformation.webUrl}} target="_blank">Ver pagina <img alt="Un icono que representa la WEB" src="assets/img/WebWhiteIcon.svg"/></a>
+  </div>
+</article>
