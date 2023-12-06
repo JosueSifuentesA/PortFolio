@@ -13,6 +13,8 @@
   </div>
   <div class="projectCard_options">
     <a class="options_github" href={{cardInformation.githubUrl}} target="_blank">Ver codigo <img alt="Un icono de Github" src="assets/img/GithubIcon.svg"/></a>
-    <a class="options_web"    href={{cardInformation.webUrl}} target="_blank">Ver pagina <img alt="Un icono que representa la WEB" src="assets/img/WebWhiteIcon.svg"/></a>
+    @if(cardInformation.webUrl != null){
+      <a class="options_web"    href={{cardInformation.webUrl}} target="_blank">Ver pagina <img alt="Un icono que representa la WEB" src="assets/img/WebWhiteIcon.svg"/></a>
+    }
   </div>
 </article>
